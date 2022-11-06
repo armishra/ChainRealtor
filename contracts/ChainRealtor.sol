@@ -12,7 +12,7 @@ interface IMidpoint {
     function callMidpoint(uint64 midpointId, bytes calldata _data) external returns(uint256 requestId);
 }
 
-contract SampleContract {
+contract ChainRealtor {
     // These events are for demonstration purposes only; they can be removed without effect.
     event RequestMade(uint256 requestId, string winnerEmail);
     event ResponseReceived(uint256 requestId);

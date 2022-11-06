@@ -5,7 +5,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-  <title>Ethersjs Demo</title>
+  <title>ChainRealtor Demo</title>
   <style>
     body {
       background-color: white;
@@ -27,8 +27,8 @@
   <div class="container">
 
     <div class="form-group">
-      <h1>Real Estate Bidding Portal</h1>
-      <p> Use this portal to bid on real estate! </p>
+      <h1>ChainRealtor</h1>
+      <p> The leading platform for bidding on real estate <b> on chain</b></p>
 
       <div class="row">
         <div class="card" style="width: 18rem;">
@@ -60,7 +60,7 @@
       window.ethereum.enable()
       var provider = new ethers.providers.Web3Provider(web3.currentProvider, 'goerli');
 
-      var MoodContractAddress = "0x93aAFAbefc70dBc981C043A60d53d1D1619BF398";
+      var MoodContractAddress = "0x3f6c8A843F95161E7981917265b0eEbe54882754";
       let MoodContractABI = [{ "inputs": [], "stateMutability": "nonpayable", "type": "constructor" }, { "anonymous": false, "inputs": [{ "indexed": false, "internalType": "uint256", "name": "requestId", "type": "uint256" }, { "indexed": false, "internalType": "string", "name": "winnerEmail", "type": "string" }], "name": "RequestMade", "type": "event" }, { "anonymous": false, "inputs": [{ "indexed": false, "internalType": "uint256", "name": "requestId", "type": "uint256" }], "name": "ResponseReceived", "type": "event" }, { "inputs": [{ "internalType": "string", "name": "bidderEmail", "type": "string" }, { "internalType": "uint256", "name": "dollarAmount", "type": "uint256" }], "name": "bid", "outputs": [], "stateMutability": "nonpayable", "type": "function" }, { "inputs": [{ "internalType": "string", "name": "winnerEmail", "type": "string" }], "name": "callMidpoint", "outputs": [], "stateMutability": "nonpayable", "type": "function" }, { "inputs": [{ "internalType": "uint256", "name": "_requestId", "type": "uint256" }, { "internalType": "uint64", "name": "_midpointId", "type": "uint64" }], "name": "callback", "outputs": [], "stateMutability": "nonpayable", "type": "function" }, { "inputs": [], "name": "closeAuction", "outputs": [], "stateMutability": "nonpayable", "type": "function" }, { "inputs": [], "name": "getHighestBidAmount", "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }], "stateMutability": "view", "type": "function" }, { "inputs": [], "name": "getHighestBidderEmail", "outputs": [{ "internalType": "string", "name": "", "type": "string" }], "stateMutability": "view", "type": "function" }];
       console.log(MoodContractAddress);
 
